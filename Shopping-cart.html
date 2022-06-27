@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/custom.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="icon" href="/img/favicon/favicon.ico">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <style>
+       @media (min-width: 992px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+        .card {
+            height: 100%;
+        }
+
+        .cart-item-count {
+            position: relative;
+        }
+
+        .cesta-feira__num-items{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #fff;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -2px;
+            right: -12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+  <title>Vinpixel</title>
+</head>
+
+<body class="preloader-visible" data-barba="wrapper">
+
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader">
+    <div class="preloader__bg"></div>
+
+    <div class="preloader__progress">
+      <div class="preloader__progress__inner"></div>
+    </div>
+  </div>
+  <!-- preloader end -->
+
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+
+    <!-- to-top-button start -->
+    <div data-cursor class="backButton js-backButton">
+      <span class="backButton__bg"></span>
+      <div class="backButton__icon__wrap">
+        <i class="backButton__button js-top-button" data-feather="arrow-up"></i>
+      </div>
+    </div>
+    <!-- to-top-button end -->
+
+
+    <main class="">
+
+
+      <!-- header start -->
+      <header class="header -light -sticky-light js-header">
+        <!-- header__bar start -->
+        <div class="header__bar">
+          <div class="header__logo js-header-logo">
+            <a data-barba href="index.html">
+              <img class="header__logo__light js-lazy" data-srcset="img/logo/logo-light.png" data-src="img/logo/logo-light.png" alt="Logo">
+            </a>
+            <a data-barba href="index.html">
+              <img class="header__logo__dark js-lazy" data-srcset="img/logo/logo-dark.png" data-src="img/logo/logo-dark.png" alt="Logo">
+            </a>
+          </div>
+
+          <div class="header__menu js-header-menu">
+            <button type="button" class="nav-button-open js-nav-open">
+              <i class="icon" data-feather="menu"></i>
+            </button>
+          </div>
+        </div>
+        <!-- header__bar end -->
+
+
+        <!-- nav start -->
+        <nav class="nav js-nav">
+          <div class="nav__inner js-nav-inner">
+            <div class="nav__bg js-nav-bg"></div>
+
+            <div class="nav__container">
+              <div class="nav__header">
+                <button type="button" class="nav-button-back js-nav-back">
+                  <i class="icon" data-feather="arrow-left-circle"></i>
+                </button>
+
+                <button type="button" class="nav-btn-close js-nav-close pointer-events-none">
+                  <i class="icon" data-feather="x"></i>
+                </button>
+              </div>
+
+              <div class="nav__content">
+                <div class="nav__content__left">
+                  <div class="navList__wrap">
+                    <ul class="navList js-navList">
+                      <li>
+                        <a data-barba href="index.html">
+                          Trang chủ
+                        </a>
+                      </li>
+                      <li>
+                        <a data-barba href="user-profile.html">
+                          Thông tin người dùng
+                        </a>
+                      </li>
+
+                      <li>
+                        <a data-barba href="food.html">
+                          Vinxipel Food
+                        </a>
+                      </li>
+
+                      <li>
+                        <a data-barba href="blog.html">
+                          Blog
+                        </a>
+                      </li>
+                      <li>
+                        <a href="sign-in.html">
+                         Đăng nhập
+                        </a>
+                      </li>
+                      <li>
+                        <a href="sign-up.html">
+                          Đăng ký
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="nav__content__right">
+                  <div class="nav__info">
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Address
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <p>
+                          470 Trần Đại Nghĩa,Ngũ Hành Sơn, Đà Nẵng
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Socials
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <a href="#">Behance</a>
+                        <a href="#">Dribbble</a>
+                        <a href="https://www.facebook.com/truon.quan.9">Facebook</a>
+                        <a href="#">Twitter</a>
+                      </div>
+                    </div>
+
+                    <div class="nav__info__item js-navInfo-item">
+                      <h5 class="text-sm tracking-none fw-500">
+                        Contact Us
+                      </h5>
+
+                      <div class="nav__info__content text-lg text-white mt-16">
+                        <a href="#">quantl.21it@vku.udn.vn</a>
+                        <a href="#">0702172462</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- nav end -->
+      </header>
+      <!-- header end -->
+
+
+      <!-- section start -->
+      <section class="layout-pt-xl layout-pb-xs">
+        <!-- container start -->
+        <div class="container">
+          <!-- row start -->
+          <div class="row">
+            <div class="col-xl-7 col-lg-8">
+              <ul class="breadcrumbs text-black">
+                <li class="breadcrumbs-item">
+                  <a data-barba href="index.html">
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="breadcrumbs-item active" aria-current="page">
+                  Shopping
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </section>
+      <!-- section end -->
+
+
+      <!-- section start -->
+      <section class="layout-pt-xs layout-pb-md">
+        <!-- container start -->
+        <div class="container">
+          <!-- row start -->
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-20">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="Shopping-cart.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-item-count" href="cart.html" data-cesta-feira-items-count><span class="fa fa-shopping-cart"></span> Shopping Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Page Content -->
+        <div class="container">
+        
+            <!-- Jumbotron Header -->
+            <header class="jumbotron my-5">
+                <h1 class="display-5 text-center">Đồng hành cùng Vinpixel - Ẩm thực Việt Nam</h1>
+                <div class="jquery-script-ads"><script type="text/javascript">
+        //-->
+        </script>
+        <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script></div>
+            </header>
+        
+            <!-- Page Features -->
+            <div class="row text-center">
+        
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Phở Thìn Lò Đúc Hà Nội</h4>
+                            <a href=""><img src="img/team/01.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                            <p class="card-text">
+                              <hr> 
+                              Giá:  <b> 65.000₫</b>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                              
+                                <input type="hidden" value="Phở Thìn Lò Đúc Hà Nội" name="product_name" data-cesta-feira-attribute="">
+                                <input type="hidden" value="65.000₫" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="1" data-cesta-feira-item-id />
+                                <input type="hidden" value="pho" name="item_type" data-cesta-feira-attribute>
+                                <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Bún bò O Vọng - Chú Phụng</h4>
+                            <a href=""><img src="./img/team/02.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                            <p class="card-text">
+                                <hr> 
+                              Giá: <b>35.000₫</b></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                               
+                                <input type="hidden" value="Bún bò O Vọng - Chú Phụng" name="product_name" data-cesta-feira-attribute="">
+                                <input type="hidden" value="35.000₫" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                                <input type="hidden" value="2" data-cesta-feira-item-id />
+                                <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Cao lầu không gian Xanh Hội An</h4>
+                            <a href=""><img src="./img/team/03.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                            <p class="card-text">
+                                 <hr>  
+                                Giá: <b>40.000₫</b></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                              
+                                <input type="hidden" value="Cao lầu không gian Xanh Hội An" name="product_name" data-cesta-feira-attribute="">
+                                <input type="hidden" value="40.000₫" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="laptop" name="item_type" data-cesta-feira-attribute>
+                                <input type="hidden" value="3" data-cesta-feira-item-id />
+                                <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Quán bún kèn Út Lượm Phú Quốc</h4>
+                            <a href=""><img src="./img/team/04.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                            <p class="card-text">
+                                <hr> 
+                             Giá: <b>25.000₫</b></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="" class="form" data-cesta-feira-form>
+                                <div class="form-group">
+                                    <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                                </div>
+                                
+                                <input type="hidden" value="Quán bún kèn Út Lượm Phú Quốc" name="product_name" data-cesta-feira-attribute>
+                                <input type="hidden" value="25.000₫" name="unity_price" data-cesta-feira-attribute>
+                                <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                                <input type="hidden" value="4" data-cesta-feira-item-id />
+                                <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="card">
+                      <img class="card-img-top" src="" alt="">
+                      <div class="card-body">
+                          <h4 class="card-title">Bánh đúc lá dứa - Cần Thơ</h4>
+                          <a href=""><img src="./img/team/05.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                          <p class="card-text">
+                              <hr> 
+                           Giá: <b>55.000₫</b></p>
+                      </div>
+                      <div class="card-footer">
+                          <form action="" class="form" data-cesta-feira-form>
+                              <div class="form-group">
+                                  <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                              </div>
+                             
+                              <input type="hidden" value="Bánh đúc lá dứa - Cần Thơ" name="product_name" data-cesta-feira-attribute>
+                              <input type="hidden" value="55.000₫" name="unity_price" data-cesta-feira-attribute>
+                              <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                              <input type="hidden" value="5" data-cesta-feira-item-id />
+                              <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+        
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Cốm Huy Linh gia truyền</h4>
+                        <a href=""><img src="./img/team/06.jpg" alt="" style="width: 200px; height: 150px;"></a>
+                        <p class="card-text">
+                            <hr> 
+                         Giá: <b>28.000₫</b></p>
+                    </div>
+                    <div class="card-footer">
+                        <form action="" class="form" data-cesta-feira-form>
+                            <div class="form-group">
+                                <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                            </div>
+                           
+                            <input type="hidden" value="Cốm Huy Linh gia truyền" name="product_name" data-cesta-feira-attribute>
+                            <input type="hidden" value="28.000₫" name="unity_price" data-cesta-feira-attribute>
+                            <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                            <input type="hidden" value="6" data-cesta-feira-item-id />
+                            <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="card">
+                  <img class="card-img-top" src="" alt="">
+                  <div class="card-body">
+                      <h4 class="card-title">Bánh đa Kiện Khê</h4>
+                      <a href=""><img src="./img/team/07.jpg" alt="" style="width: 200px; height: 150px; margin-top: 30px;"></a>
+                      <p class="card-text">
+                          <hr>
+                       Giá: <b>15.000₫</b></p>
+                  </div>
+                  <div class="card-footer">
+                      <form action="" class="form" data-cesta-feira-form>
+                          <div class="form-group">
+                              <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                          </div>
+                          
+                          <input type="hidden" value="Bánh đa Kiện Khê" name="product_name" data-cesta-feira-attribute>
+                          <input type="hidden" value="15.000₫" name="unity_price" data-cesta-feira-attribute>
+                          <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                          <input type="hidden" value="7" data-cesta-feira-item-id />
+                          <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                      </form>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Yến sào Nha Trang</h4>
+                    <a href=""><img src="./img/team/08.jpg" alt="" style="width: 200px; height: 150px; margin-top: 30px;"></a>
+                    <p class="card-text">
+                        <hr> 
+                     Giá: <b>700.000₫</b></p>
+                </div>
+                <div class="card-footer">
+                    <form action="" class="form" data-cesta-feira-form>
+                        <div class="form-group">
+                            <input type="number" min="1" value="1" class="form-control" name="quantity" data-cesta-feira-attribute placeholder="Quantity">
+                        </div>
+                        <input type="hidden" value="Yến sào Nha Trang" name="product_name" data-cesta-feira-attribute>
+                        <input type="hidden" value="700.000₫" name="unity_price" data-cesta-feira-attribute>
+                        <input type="hidden" value="other" name="item_type" data-cesta-feira-attribute>
+                        <input type="hidden" value="8" data-cesta-feira-item-id />
+                        <input type="submit" class="btn btn-primary" value="Add to Cart"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+            </div>
+            <!-- /.row -->
+        
+        </div>
+        <!-- /.container -->
+        
+          <div class="row no-gutters justify-content-between">
+
+            <!-- posts start -->
+            <div class="col-lg-8">
+              <div class="row x-gap-60 y-gap-60">
+
+            <!-- sidebar start -->
+            <div class="col-lg-4 md:mt-64">
+              <aside class="blogSidebar widget_area">
+
+             </div>
+            <!-- sidebar end -->
+
+          </div>
+          <!-- row end -->
+        </div>
+        <!-- container end -->
+      </section>
+      <!-- section end -->
+
+
+      <!-- footer start -->
+      <footer class="footer -type-1 bg-dark-1">
+        <!-- container start -->
+        <div class="container">
+
+          <div class="footer__top">
+            <!-- row start -->
+            <div class="row y-gap-48 justify-content-between">
+              <div class="col-lg-auto col-sm-12">
+                <a href="index.html" class="footer__logo text-white">
+                  Vinpixel.
+                </a>
+              </div>
+
+              <div class="col-lg-3 col-sm-6">
+                <h4 class="text-xl fw-500 text-white">
+                  Address
+                </h4>
+
+                <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                  <p>470 Trần Đại Nghĩa,Ngũ Hành Sơn, Đà Nẵng</p>
+                  <p class="mt-8">quantl.21it@vku.udn.vn</p>
+                  <p class="mt-8">0702172462</p>
+                </div>
+              </div>
+
+              <div class="col-lg-auto col-sm-4">
+                <h4 class="text-xl fw-500 text-white">
+                  Links
+                </h4>
+
+                <div class="footer__content text-base text-light mt-16 sm:mt-12">
+                  <div><a data-barba href="blog.html" class="button -underline">Blog</a></div>
+                  <div><a data-barba href="about-1.html" class="button -underline mt-4">Abous Us</a></div>
+                  <div><a data-barba href="food.html" class="button -underline mt-4">Food</a></div>
+                  <div><a data-barba href="contacts.html" class="button -underline mt-4">Contacts</a></div>
+                </div>
+              </div>
+
+              <div class="col-lg-auto col-auto">
+                <h4 class="text-xl fw-500 text-white">
+                  Follow us
+                </h4>
+
+                <div class="social -bordered mt-16 sm:mt-12">
+                  <a class="social__item text-white border-light" href="#">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a class="social__item text-white border-light" href="#">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a class="social__item text-white border-light" href="#">
+                    <i class="fa fa-youtube-play"></i>
+                  </a>
+                  <a class="social__item text-white border-light" href="#">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- row end -->
+          </div>
+
+
+          <div class="footer__bottom -light">
+            <!-- row start -->
+            <div class="row">
+              <div class="col">
+                <div class="footer__copyright">
+                  <p class="text-light">
+                    @ 2022, Vinpixel.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- row end -->
+          </div>
+
+        </div>
+        <!-- container end -->
+      </footer>
+      <!-- footer end -->
+
+
+    </main>
+
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jStorage/0.4.12/jstorage.min.js"></script>
+<script src="./src/cesta-feira.js"></script>
+<script type="application/javascript">
+  $( document ).ready(function() {
+    $.CestaFeira({
+      debug: false,
+      onItemAdded: function (item) {
+        console.log(item);
+      },
+      onItemUpdated: function (item) {
+        console.log(item);
+      }
+    });
+  });
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+
+</html>
